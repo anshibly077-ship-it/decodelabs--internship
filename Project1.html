@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Empathy Map - UX/UI Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: violet;
+            color: #26352d;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        header h1 {
+            color: #356859;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #66756c;
+        }
+
+        /* Persona */
+        .persona {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .persona h2 {
+            color: #356859;
+            margin-bottom: 20px;
+        }
+
+        .persona-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .profile {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: #cde8dc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+        }
+
+        .details h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .details p {
+            margin: 7px 0;
+        }
+
+        /* Goals and frustrations */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #356859;
+        }
+
+        .card ul {
+            padding-left: 22px;
+        }
+
+        .card li {
+            margin: 10px 0;
+        }
+
+        /* Empathy Map */
+        .map-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            color: #356859;
+        }
+
+        .empathy-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .map-box {
+            min-height: 250px;
+            padding: 25px;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .map-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .map-box ul {
+            padding-left: 22px;
+        }
+
+        .map-box li {
+            margin: 12px 0;
+        }
+
+        .says {
+            border-top: 7px solid #6baed6;
+        }
+
+        .thinks {
+            border-top: 7px solid #9b8fd3;
+        }
+
+        .does {
+            border-top: 7px solid #76b852;
+        }
+
+        .feels {
+            border-top: 7px solid #e59b75;
+        }
+
+        /* Pain Points */
+        .pain-points {
+            margin-top: 25px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .pain-points h2 {
+            color: #356859;
+            margin-bottom: 20px;
+        }
+
+        .pain {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f2f7f4;
+            border-radius: 10px;
+        }
+
+        /* Insights */
+        .insights {
+            margin-top: 25px;
+            background: #356859;
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .insights h2 {
+            margin-bottom: 15px;
+        }
+
+        .insights li {
+            margin: 12px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+            color: #66756c;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            body {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .persona-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .two-column,
+            .empathy-map {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <h1>Project 1: The Empathy Map</h1>
+        <p>UX/UI Design Internship</p>
+        <p>Understanding the needs of busy office professionals</p>
+    </header>
+
+
+    <!-- User Persona -->
+    <section class="persona">
+
+        <h2>👤 User Persona</h2>
+
+        <div class="persona-content">
+
+            <div class="profile">
+                👨‍💻
+            </div>
+
+            <div class="details">
+
+                <h3>Rahul Sharma</h3>
+
+                <p><strong>Age:</strong> 28 Years</p>
+
+                <p><strong>Occupation:</strong> Software Developer</p>
+
+                <p><strong>Working Hours:</strong> 9:00 AM - 6:00 PM</p>
+
+                <p><strong>Location:</strong> Lucknow</p>
+
+                <p>
+                    Rahul is a busy software developer who spends most
+                    of his day working at a desk. He wants to stay fit
+                    but struggles to find enough time for exercise.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Goals and Frustrations -->
+    <section class="two-column">
+
+        <div class="card">
+
+            <h2>🎯 Goals</h2>
+
+            <ul>
+                <li>Stay physically active</li>
+                <li>Improve overall health</li>
+                <li>Reduce work stress</li>
+                <li>Exercise regularly</li>
+                <li>Find short workouts</li>
+                <li>Exercise without going to the gym</li>
+            </ul>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>😫 Frustrations</h2>
+
+            <ul>
+                <li>Lack of time</li>
+                <li>Long workout sessions</li>
+                <li>Office fatigue</li>
+                <li>Back-to-back meetings</li>
+                <li>No time to visit the gym</li>
+                <li>Complicated fitness apps</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Empathy Map -->
+    <h1 class="map-title">❤️ Empathy Map</h1>
+
+    <section class="empathy-map">
+
+        <!-- Says -->
+        <div class="map-box says">
+
+            <h2>🗣️ SAYS</h2>
+
+            <ul>
+                <li>"I don't have enough time to exercise."</li>
+                <li>"I need short workouts."</li>
+                <li>"Going to the gym is difficult."</li>
+                <li>"I can't spend an hour working out."</li>
+                <li>"I want something I can do during my workday."</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Thinks -->
+        <div class="map-box thinks">
+
+            <h2>🧠 THINKS</h2>
+
+            <ul>
+                <li>"I should take better care of my health."</li>
+                <li>"Where will I find time to exercise?"</li>
+                <li>"Can a 5-10 minute workout help?"</li>
+                <li>"I need something simple."</li>
+                <li>"I am becoming less active."</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Does -->
+        <div class="map-box does">
+
+            <h2>👀 DOES</h2>
+
+            <ul>
+                <li>Works long hours at a desk</li>
+                <li>Attends back-to-back meetings</li>
+                <li>Sits for long periods</li>
+                <li>Postpones exercise</li>
+                <li>Exercises occasionally on weekends</li>
+                <li>Uses mobile fitness content</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Feels -->
+        <div class="map-box feels">
+
+            <h2>❤️ FEELS</h2>
+
+            <ul>
+                <li>Tired</li>
+                <li>Stressed</li>
+                <li>Guilty</li>
+                <li>Burned out</li>
+                <li>Physically stiff</li>
+                <li>Unmotivated</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Pain Points -->
+    <section class="pain-points">
+
+        <h2>⚠️ User Pain Points</h2>
+
+        <div class="pain">
+            <strong>1. Lack of Time:</strong>
+            Busy work schedule leaves little time for exercise.
+        </div>
+
+        <div class="pain">
+            <strong>2. Long Workouts:</strong>
+            Traditional workouts take too much time.
+        </div>
+
+        <div class="pain">
+            <strong>3. Fatigue:</strong>
+            The user feels tired after a long workday.
+        </div>
+
+        <div class="pain">
+            <strong>4. No Gym Access:</strong>
+            Travelling to a gym is inconvenient.
+        </div>
+
+        <div class="pain">
+            <strong>5. Complex Apps:</strong>
+            Complicated interfaces make fitness apps difficult to use.
+        </div>
+
+    </section>
+
+
+    <!-- Key Insights -->
+    <section class="insights">
+
+        <h2>💡 Key Insights</h2>
+
+        <ul>
+            <li>The user needs short workouts that fit into a busy workday.</li>
+
+            <li>The user prefers convenience over long gym sessions.</li>
+
+            <li>The fitness experience should be simple and quick.</li>
+
+            <li>Micro-workouts can help users exercise during the workday.</li>
+
+            <li>The app should reduce friction rather than add another task.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Project 1 - The Empathy Map | UX/UI Design Internship
+        </p>
+
+        <p>
+            Prepared by: Anshi
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
