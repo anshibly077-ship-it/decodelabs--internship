@@ -1,2 +1,2 @@
-# decodelabs--internship
+# decodelabs-internship
 My Decodelabs Internship Projects
