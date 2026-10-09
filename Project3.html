@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenHarvest - Organic Food</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            🌿 GreenHarvest
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#tracking">Tracking</a>
+        </div>
+
+        <button class="cart-btn" onclick="showCart()">
+            🛒 Cart <span id="cartCount">0</span>
+        </button>
+    </nav>
+
+
+    <!-- Hero / Splash Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">FRESH • ORGANIC • TRUSTED</p>
+
+            <h1>
+                Fresh From Farm
+                <span>To Your Door</span>
+            </h1>
+
+            <p>
+                Premium organic food delivered fresh from
+                trusted local farms.
+            </p>
+
+            <button class="primary-btn" onclick="scrollToProducts()">
+                Explore Products →
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+            <div class="vegetable-circle">
+                🥕
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <h2>Shop Fresh</h2>
+
+        <p class="section-text">
+            Naturally grown products for a healthier lifestyle.
+        </p>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                🥕
+                <h3>Vegetables</h3>
+            </div>
+
+            <div class="category-card">
+                🍎
+                <h3>Fruits</h3>
+            </div>
+
+            <div class="category-card">
+                🌿
+                <h3>Greens</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+    <section class="products" id="products">
+
+        <h2>Our Organic Products</h2>
+
+        <p class="section-text">
+            Carefully selected from trusted farms.
+        </p>
+
+
+        <div class="product-container">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+
+                <div class="product-image tomato">
+                    🍅
+                </div>
+
+                <span class="organic">✓ Organic</span>
+
+                <h3>Heirloom Tomatoes</h3>
+
+                <p class="description">
+                    Fresh farm-grown tomatoes.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹399 / kg</strong>
+
+                    <button onclick="addToCart('Heirloom Tomatoes')">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="product-card">
+
+                <div class="product-image carrot">
+                    🥕
+                </div>
+
+                <span class="organic">✓ Organic</span>
+
+                <h3>Fresh Carrots</h3>
+
+                <p class="description">
+                    Naturally grown crunchy carrots.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹199 / kg</strong>
+
+                    <button onclick="addToCart('Fresh Carrots')">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+            <div class="product-card">
+
+                <div class="product-image spinach">
+                    🥬
+                </div>
+
+                <span class="organic">✓ Organic</span>
+
+                <h3>Fresh Spinach</h3>
+
+                <p class="description">
+                    Fresh green leafy vegetables.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₹99 / bunch</strong>
+
+                    <button onclick="addToCart('Fresh Spinach')">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Trust Section -->
+    <section class="trust">
+
+        <h2>Why You Can Trust Us</h2>
+
+        <div class="trust-container">
+
+            <div class="trust-card">
+                🌱
+                <h3>Farm to Table</h3>
+                <p>
+                    Directly sourced from local farms.
+                </p>
+            </div>
+
+            <div class="trust-card">
+                🛡️
+                <h3>Certified Organic</h3>
+                <p>
+                    Quality checked and verified products.
+                </p>
+            </div>
+
+            <div class="trust-card">
+                🚚
+                <h3>Fast Delivery</h3>
+                <p>
+                    Fresh products delivered quickly.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Delivery Tracking -->
+    <section class="tracking" id="tracking">
+
+        <h2>Track Your Order</h2>
+
+        <div class="tracking-box">
+
+            <div class="track active">
+                <span>🌱</span>
+                <h3>Harvested</h3>
+                <p>Farm</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="track active">
+                <span>📦</span>
+                <h3>Packed</h3>
+                <p>Farm Center</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="track active">
+                <span>🚚</span>
+                <h3>Out for Delivery</h3>
+                <p>On the way</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="track">
+                <span>🏠</span>
+                <h3>Delivered</h3>
+                <p>Your Home</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>GreenHarvest 🌿</h2>
+
+        <p>
+            Fresh food. Healthy life. Better future.
+        </p>
+
+        <p>
+            © 2026 GreenHarvest. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="scriptt.js"></script>
+
+</body>
+</html>
